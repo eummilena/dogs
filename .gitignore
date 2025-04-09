@@ -1,0 +1,19 @@
+node_modules/vite/types/internal/lightningcssOptions.d.ts
+*.js
+# Ignora dependências
+node_modules/
+
+# Ignora arquivos de build do Vite
+dist/
+
+# Ignora logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignora arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Ignora configurações locais do VS Code
+.vscode/
