@@ -3,6 +3,7 @@ node_modules/vite/types/internal/lightningcssOptions.d.ts
 # Ignora dependências
 node_modules/
 
+
 # Ignora arquivos de build do Vite
 dist/
 
