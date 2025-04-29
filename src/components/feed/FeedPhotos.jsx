@@ -5,21 +5,19 @@ import { PHOTOS_GET } from '../../api';
 import Loading from '../Helper/Loading';
 import styles from './FeedPhotos.module.css'
 
-const FeedPhotos = ({ setModalPhoto }) => {
+const FeedPhotos = ({ page, user, setModalPhoto, setInfinite }) => {
 
     const { data, loading, error, request } = useFetch();
 
     useEffect(() => {
         async function fetchPhoto() {
-            const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
+            const total = 3
+            const { url, options } = PHOTOS_GET({ page, total: 3, user });
             const { response, json } = await request(url, options);
-            console.log(json);
-            console.log(response);
-
-
+            if (response && response.ok && json.length < total) setInfinite(false)
         }
         fetchPhoto();
-    }, [request]);
+    }, [request, user, page, setInfinite]);
 
 
     if (error) return <Error error={error} />

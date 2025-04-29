@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import UserHeader from './UserHeader'
 import UserPhotoPost from './UserPhotoPost'
 import UserStats from './UserStats'
 import { Route, Routes } from 'react-router-dom'
 import Feed from '../feed/Feed'
+import UserContext from '../../UserContext'
 
 
 
 const User = () => {
+
+    const { data } = useContext(UserContext);
     return (
         <section className='container'>
             <UserHeader />
