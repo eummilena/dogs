@@ -6,10 +6,12 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import Login from './components/login/Login';
 import { UserStorage } from './UserContext';
+import Photo from './components/photo/Photo';
 
 import './App.css'
 import ProtectedRoute from './components/Helper/ProtectedRoute';
 import User from './components/user/User';
+import UserProfile from './components/user/UserProfile';
 
 const App = () => {
   return <div>
@@ -24,6 +26,9 @@ const App = () => {
               <User />
             </ProtectedRoute >}
           />
+          <Route path="/foto/:id" element={<Photo />} />
+          <Route path="/perfil/:user" element={<UserProfile />} />
+
         </Routes>
         <Footer />
       </UserStorage>
