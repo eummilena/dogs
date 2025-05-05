@@ -40,6 +40,7 @@ const LoginPasswordReset = () => {
 
   return (
     <div>
+      <Head title='Resete a senha' />
       <h1 className='title'>Resete a senha</h1>
       <form onSubmit={handleSubmit}>
         <Input label='Nova senha' type='password' name='password' {...password} />
